@@ -3,16 +3,15 @@ import { constant } from './Contstant';
 
 const Head = () => {
   return (
-    <div className='grid grid-flow-col items-center p-4 m-2 shadow-lg w-full'>
-
-      <div className='flex items-center col-span-1'>
+    <div className='grid grid-cols-[auto,1fr,auto] items-center p-4 m-2 shadow-lg w-full'>
+      <div className='flex items-center space-x-3'>
         <img className='h-10' src={constant?.HAMBERGERICON} alt='menu' />
-        <img className='h-10 mx-3' src={constant?.YOUTUBE} alt='YouTube' />
+        <img className='h-10' src={constant?.YOUTUBE} alt='YouTube' />
       </div>
 
-      <div className='col-span-10 flex justify-center'>
+      <div className='flex justify-center w-full'>
         <input 
-          className='h-10 w-1/2 bg-slate-100 border border-gray-300 px-5 rounded-l-full focus:outline-none' 
+          className='h-10 w-full max-w-lg bg-slate-100 border border-gray-300 px-5 rounded-l-full focus:outline-none' 
           type='text' 
           placeholder='Search here...' 
         />
@@ -24,9 +23,8 @@ const Head = () => {
       <div className='flex justify-end items-center'>
         <img className='h-10' src={constant?.USERICON} alt='user' />
       </div>
-      
     </div>
   );
 };
 
-export default Head;
+export default Head ;
