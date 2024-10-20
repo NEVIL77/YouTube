@@ -2,7 +2,9 @@ import React from 'react'
 
 const ButtonList = () => {
   return (
-    <div>ButtonList</div>
+    <div className='w-full border shadow-lg' >
+      <h1>Hello</h1>
+    </div>
   )
 }
 
