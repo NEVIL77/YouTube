@@ -1,6 +1,11 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 
 const Sidebar = () => {
+
+  const isMenuopen = useSelector(store=>store.app.isMenuopen)
+
+  console.log(">>>>>>>>>",isMenuopen)
   return (
     <div className='w-48 l-full shadow-lg'>
       <h1 className='border-b-4 border-gray-200 my-1' >Subsribed</h1>

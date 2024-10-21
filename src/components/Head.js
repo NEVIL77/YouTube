@@ -1,11 +1,18 @@
 import React from 'react';
 import { constant } from './Contstant';
+import { useDispatch } from 'react-redux';
+import { toggleMenu } from './utils/appSlice';
 
 const Head = () => {
+
+  const dispatch = useDispatch()
+  const toggleMenuHandler = ()=>{
+    dispatch(toggleMenu())
+  }
   return (
     <div className='grid grid-cols-[auto,1fr,auto] items-center p-4 m-2 shadow-lg w-full'>
       <div className='flex items-center space-x-3'>
-        <img className='h-10' src={constant?.HAMBERGERICON} alt='menu' />
+        <img className='h-10' src={constant?.HAMBERGERICON} alt='menu' onClick={()=>toggleMenuHandler()}/>
         <img className='h-10' src={constant?.YOUTUBE} alt='YouTube' />
       </div>
 
