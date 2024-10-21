@@ -5,6 +5,9 @@ const Sidebar = () => {
 
   const isMenuopen = useSelector(store=>store.app.isMenuopen)
 
+  // Early Return
+  if(!isMenuopen) return null 
+
   console.log(">>>>>>>>>",isMenuopen)
   return (
     <div className='w-48 l-full shadow-lg'>
