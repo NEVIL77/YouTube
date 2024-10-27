@@ -1,7 +1,10 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import {YOUTUBE_VIDEO_API} from '../utils/constant'
+import VideoCard from './VideoCard'
 
 const VideoContainer = () => {
+
+  const [videos,setVideos] = useState([])
 
   useEffect(()=>{
     fetchData()
@@ -11,10 +14,13 @@ const VideoContainer = () => {
     const data = await fetch(YOUTUBE_VIDEO_API)
     const json = await data.json()
     console.log('data: ', json);
+    setVideos(json.items)
   }
 
   return (
-    <div className='w-full h-full shadow-lg my-2'>VideoContainer</div>
+    <div className='flex'>
+      {videos.map((video)=> <VideoCard key={video?.id} info={video} /> )}
+    </div>
   )
 }
 
