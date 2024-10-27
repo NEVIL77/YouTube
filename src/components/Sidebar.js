@@ -29,15 +29,7 @@ const Sidebar = () => {
         <li>Five 5 </li>
         <li>Six 6</li>
       </ul>
-      <h1 className='border-b-4 border-gray-200 mb-2'>kid</h1>
-      <ul>
-        <li>ONE </li>
-        <li>Two</li>
-        <li>Three</li>
-        <li>Four</li>
-        <li>Five</li>
-        <li>Six</li>
-      </ul>
+      
     </div>
   )
 }
