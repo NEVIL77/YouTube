@@ -5,13 +5,25 @@ import { Provider } from 'react-redux';
 import store from './utils/store';
 import React from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import MainContainer from './components/MainContainer';
+import WatchPage from './components/WatchPage';
 
 function App() {
 
   const appRouter = createBrowserRouter([
     {
       path : "/",
-      element : <Body />
+      element  : <Body />,
+      children : [
+        {
+          path : "/",
+          element : <MainContainer/>
+        },
+        {
+          path : "watch",
+          element : <WatchPage/>
+        }
+      ]
     }
   ])
 
@@ -20,9 +32,7 @@ function App() {
       <Provider store={store}>
         <div className='block'>
           <Head />
-          <RouterProvider router={appRouter}>
-            <Body />
-          </RouterProvider>
+          <RouterProvider router={appRouter}/>
         </div>
       </Provider>
     </React.StrictMode>

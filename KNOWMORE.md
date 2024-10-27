@@ -14,3 +14,8 @@ TO INSTALL REACT ROUTER =>
 step 1 - npm i react-router-dom
 step 2 - create browser Router  ( createBrowserRouter ) => this CBR takes ARRAY OF PATH => ARRAY HAS OBJECT => OBJECT HAS PATH { path : '/' , element : <Body/> } 
 step 3 - we have to proved this Router to Component here <Body/> Component will unmount and mount according to URL  , so we have to Prove this Router configure to  <Body /> Component with  <RouterProvide route={configConstant} / > and this RouterProvider Come from react-router-dom
+
+where i declare the RouterProvider my Outlet will go 
+ Outlet use to make Component render dynamiclly here i have body -> two children 1.sideBar 2. MainContainer . i want this MainContainer Dynmic for that either it load MainContainer or Watch Component for that i have Outlet
+
+ where does my children will go mean where does it render where my Outlet is there 
