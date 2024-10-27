@@ -10,4 +10,5 @@ imp =>
 
 IMP =>> To Install Redux Tool Kit => npm i @reduxjs/toolkit 
         Nedd React-redux Also     => npm i react-redux
-        
+
+When ever i move to watch page my side bar collape and for first time to this i have to dispatch an action in WatchComponent in UseEffect
