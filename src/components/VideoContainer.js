@@ -1,30 +1,30 @@
-import React, { useEffect, useState } from 'react'
-import {YOUTUBE_VIDEO_API} from '../utils/constant'
-import VideoCard from './VideoCard'
-import { Link } from 'react-router-dom'
+import React, { useEffect, useState } from 'react';
+import { YOUTUBE_VIDEO_API } from '../utils/constant';
+import VideoCard from './VideoCard';
+import { Link } from 'react-router-dom';
 
 const VideoContainer = () => {
+  const [videos, setVideos] = useState([]);
 
-  const [videos,setVideos] = useState([])
+  useEffect(() => {
+    fetchData();
+  }, []);
 
-  useEffect(()=>{
-    fetchData()
-  },[])
-
-  const fetchData = async ()=>{
-    const data = await fetch(YOUTUBE_VIDEO_API)
-    const json = await data.json()
-    setVideos(json.items)
-  }
+  const fetchData = async () => {
+    const data = await fetch(YOUTUBE_VIDEO_API);
+    const json = await data.json();
+    setVideos(json.items);
+  };
 
   return (
-    <div className='flex flex-wrap'>
-      {videos.map((video)=> 
-      <Link to={ `/watch?v=${video?.id}` }>
-        <VideoCard key={video?.id} info={video} /> 
-      </Link>)}
+    <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 p-4'>
+      {videos.map((video) => (
+        <Link key={video?.id} to={`/watch?v=${video?.id}`}>
+          <VideoCard info={video} />
+        </Link>
+      ))}
     </div>
-  )
-}
+  );
+};
 
-export default VideoContainer
+export default VideoContainer;
