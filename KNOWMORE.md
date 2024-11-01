@@ -23,7 +23,14 @@ where i declare the RouterProvider my Outlet will go
  for normal params there is a useParams but for QuiryParams there is useSearchParamss
 
 
- learning main things
+- what is higher order Component -> Higher Order Component is Function which take Component as Params and return a Component with improve version is called HOC
+- Why do i need HOC -> if you want to do some modfication like do some improve version of the Component then 
+
+-Youtube Search api , Responce in JSON formate -> https://stackoverflow.com/questions/11275365/youtube-api-search-auto-complete
+
+- For Search input onChange((e)=>setSearchQuery(e.target.value))
+
+- learning main things
 
  Finding the API 
     1.for Listing API
