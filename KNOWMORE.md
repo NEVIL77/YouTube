@@ -29,11 +29,19 @@ where i declare the RouterProvider my Outlet will go
 -Youtube Search api , Responce in JSON formate -> https://stackoverflow.com/questions/11275365/youtube-api-search-auto-complete
 
 - For Search input onChange((e)=>setSearchQuery(e.target.value))
+- when Component destory it call useEffect's return thing 
+- DYNAMIC CSS How to give Dynamic width and all the things like i want 36rem then i have to write w-[36rem]
+- Searching inside Object faster -> map 
+_______________________________________________________________________
 
-- learning main things
+***learning main things***
 
- Finding the API 
+* Finding the API 
     1.for Listing API
     2.Watch API -> user Embed URl 
 
-Router Configure and Outlet Configure 
+* Router Configure and Outlet Configure 
+
+* Redux as Caching 
+
+_______________________________________________________________________
